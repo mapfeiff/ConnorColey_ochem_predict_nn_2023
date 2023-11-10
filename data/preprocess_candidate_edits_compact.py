@@ -1,6 +1,6 @@
 # Import relevant packages
 from __future__ import print_function
-from global_config import USE_STEREOCHEMISTRY
+from ConnorColey_ochem_predict_nn_2023.global_config import USE_STEREOCHEMISTRY
 import numpy as np
 import cPickle as pickle
 import rdkit.Chem as Chem
@@ -12,7 +12,7 @@ import os
 import sys
 import time
 import argparse
-from ochem_predict_nn.utils.descriptors import edits_to_vectors
+from ConnorColey_ochem_predict_nn_2023.utils.descriptors import edits_to_vectors
 
 FROOT = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'lowe_data_edits')
 if not os.path.isdir(FROOT):
@@ -23,7 +23,7 @@ def get_candidates(n = 10):
 	Pull n example reactions, their candidates, and the true answer
 	'''
 
-	from ochem_predict_nn.utils.database import collection_candidates
+	from ConnorColey_ochem_predict_nn_2023.utils.database import collection_candidates
 	examples = collection_candidates()
 
 	# Define generator

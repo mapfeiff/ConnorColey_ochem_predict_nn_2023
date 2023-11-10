@@ -18,7 +18,7 @@ import re
 import itertools
 from xml.dom import minidom
 
-from ochem_predict_nn.utils.database import collection_example_reactions_details
+from ConnorColey_ochem_predict_nn_2023.utils.database import collection_example_reactions_details
 collection = collection_example_reactions_details()
 
 def doc_to_dic(document):

@@ -113,7 +113,7 @@ if __name__ == '__main__':
 		os.mkdir(out_folder)
 
 	# DATABASE
-	from ochem_predict_nn.utils.database import collection_templates
+	from ConnorColey_ochem_predict_nn_2023.utils.database import collection_templates
 	collection = collection_templates()
 
 	probability_v_rank(get_counts(collection), 

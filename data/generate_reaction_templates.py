@@ -5,7 +5,7 @@ collection containing the transforms.
 '''
 
 from __future__ import print_function
-from global_config import USE_STEREOCHEMISTRY
+from ConnorColey_ochem_predict_nn_2023.global_config import USE_STEREOCHEMISTRY
 import argparse
 from numpy.random import shuffle # for random selection
 import rdkit.Chem as Chem          # molecule building
@@ -22,7 +22,7 @@ import itertools
 from makeit.retro.draw import *
 
 # DATABASE
-from ochem_predict_nn.utils.database import collection_templates, collection_example_reactions_smilesonly
+from ConnorColey_ochem_predict_nn_2023.utils.database import collection_templates, collection_example_reactions_smilesonly
 TRANSFORM_DB = collection_templates()
 REACTION_DB = collection_example_reactions_smilesonly()
 reaction_smiles_field = 'reaction_smiles'

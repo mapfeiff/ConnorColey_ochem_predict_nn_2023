@@ -1,6 +1,6 @@
 # Import relevant packages
 from __future__ import print_function
-from global_config import USE_STEREOCHEMISTRY
+from ConnorColey_ochem_predict_nn_2023.global_config import USE_STEREOCHEMISTRY
 import numpy as np
 import os
 import sys
@@ -9,12 +9,12 @@ import h5py # needed for save_weights, fails otherwise
 from keras import backend as K 
 from keras.models import Sequential, Model, model_from_json
 from keras.optimizers import *
-import ochem_predict_nn.main.transformer as transformer 
-from ochem_predict_nn.utils.canonicalization import SmilesFixer
+import ConnorColey_ochem_predict_nn_2023.main.transformer as transformer 
+from ConnorColey_ochem_predict_nn_2023.utils.canonicalization import SmilesFixer
 from pymongo import MongoClient    # mongodb plugin
-from ochem_predict_nn.utils.summarize_reaction_outcome import summarize_reaction_outcome
-from ochem_predict_nn.utils.descriptors import edits_to_vectors, oneHotVector # for testing
-from ochem_predict_nn.main.score_candidates_from_edits_compact import build
+from ConnorColey_ochem_predict_nn_2023.utils.summarize_reaction_outcome import summarize_reaction_outcome
+from ConnorColey_ochem_predict_nn_2023.utils.descriptors import edits_to_vectors, oneHotVector # for testing
+from ConnorColey_ochem_predict_nn_2023.main.score_candidates_from_edits_compact import build
 import rdkit.Chem as Chem
 import rdkit.Chem.AllChem as AllChem
 import theano.tensor as T
@@ -198,7 +198,7 @@ if __name__ == '__main__':
 	lg.setLevel(4)
 
 	# Load transformer
-	from ochem_predict_nn.utils.database import collection_templates
+	from ConnorColey_ochem_predict_nn_2023.utils.database import collection_templates
 	templates = collection_templates()
 	Transformer = transformer.Transformer()
 	Transformer.load(templates, mincount = int(args.mincount), get_retro = False, get_synth = True, lowe = True)

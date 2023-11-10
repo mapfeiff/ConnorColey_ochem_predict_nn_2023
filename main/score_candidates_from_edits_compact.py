@@ -1,6 +1,6 @@
 # Import relevant packages
 from __future__ import print_function
-from global_config import USE_STEREOCHEMISTRY
+from ConnorColey_ochem_predict_nn_2023.global_config import USE_STEREOCHEMISTRY
 import numpy as np
 import os
 import sys
@@ -25,8 +25,8 @@ import scipy.stats as ss
 import itertools
 import time
 
-from ochem_predict_nn.utils.threadsafe import threadsafe_generator
-from ochem_predict_nn.utils.descriptors import edits_to_vectors, oneHotVector # for testing
+from ConnorColey_ochem_predict_nn_2023.utils.threadsafe import threadsafe_generator
+from ConnorColey_ochem_predict_nn_2023.utils.descriptors import edits_to_vectors, oneHotVector # for testing
 
 def build(F_atom = 1, F_bond = 1, N_h1 = 100, N_h2 = 50, N_h3 = 0, inner_act = 'tanh', l2v = 0.0, lr = 0.0003, N_hf = 20, optimizer = Adadelta(), extra_outputs = False, absolute_score = False, BASELINE_MODEL = False, HYBRID_MODEL = False):
 	'''

@@ -1,6 +1,6 @@
 import rdkit.Chem as Chem
 import rdkit.Chem.AllChem as AllChem
-from global_config import USE_STEREOCHEMISTRY
+from ConnorColey_ochem_predict_nn_2023.global_config import USE_STEREOCHEMISTRY
 
 class SmilesFixer():
 	'''

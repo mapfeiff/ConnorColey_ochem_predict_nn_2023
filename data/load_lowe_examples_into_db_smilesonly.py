@@ -17,7 +17,7 @@ import os   # for file paths
 import re 
 import itertools
 
-from ochem_predict_nn.utils.database import collection_example_reactions_smilesonly
+from ConnorColey_ochem_predict_nn_2023.utils.database import collection_example_reactions_smilesonly
 collection = collection_example_reactions_smilesonly()
 
 def main(db_fpath, N = 15):

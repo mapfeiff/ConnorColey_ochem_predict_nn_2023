@@ -1,15 +1,15 @@
 # Import relevant packages
 from __future__ import print_function
-from global_config import USE_STEREOCHEMISTRY
+from ConnorColey_ochem_predict_nn_2023.global_config import USE_STEREOCHEMISTRY
 import argparse
 import numpy as np     	      	   # for simple calculations
 import os                          # for saving
 import sys
 import rdkit.Chem as Chem
-import ochem_predict_nn.main.transformer as transformer 
-from ochem_predict_nn.utils.canonicalization import SmilesFixer
+import ConnorColey_ochem_predict_nn_2023.main.transformer as transformer 
+from ConnorColey_ochem_predict_nn_2023.utils.canonicalization import SmilesFixer
 from pymongo import MongoClient    # mongodb plugin
-from ochem_predict_nn.utils.summarize_reaction_outcome import summarize_reaction_outcome
+from ConnorColey_ochem_predict_nn_2023.utils.summarize_reaction_outcome import summarize_reaction_outcome
 import re
 import time
 from tqdm import tqdm
@@ -20,7 +20,7 @@ def main(mincount = 50, n_max = 50, outfile = '.', singleonly = True, log = Fals
 	lg = RDLogger.logger()
 	lg.setLevel(4)
 
-	from ochem_predict_nn.utils.database import collection_example_reactions_details, collection_templates, collection_candidates
+	from ConnorColey_ochem_predict_nn_2023.utils.database import collection_example_reactions_details, collection_templates, collection_candidates
 	reactions = collection_example_reactions_details() 
 	templates = collection_templates()
 	candidates = collection_candidates()
