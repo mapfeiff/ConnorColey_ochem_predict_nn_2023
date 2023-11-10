@@ -8,7 +8,7 @@ import sys
 import rdkit.Chem as Chem
 import ConnorColey_ochem_predict_nn_2023.main.transformer as transformer 
 from ConnorColey_ochem_predict_nn_2023.utils.canonicalization import SmilesFixer
-from pymongo import MongoClient    # mongodb plugin
+#from pymongo import MongoClient    # mongodb plugin
 from ConnorColey_ochem_predict_nn_2023.utils.summarize_reaction_outcome import summarize_reaction_outcome
 import re
 import time

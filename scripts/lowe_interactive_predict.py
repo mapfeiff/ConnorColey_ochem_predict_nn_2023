@@ -11,7 +11,7 @@ from keras.models import Sequential, Model, model_from_json
 from keras.optimizers import *
 import ConnorColey_ochem_predict_nn_2023.main.transformer as transformer 
 from ConnorColey_ochem_predict_nn_2023.utils.canonicalization import SmilesFixer
-from pymongo import MongoClient    # mongodb plugin
+#from pymongo import MongoClient    # mongodb plugin
 from ConnorColey_ochem_predict_nn_2023.utils.summarize_reaction_outcome import summarize_reaction_outcome
 from ConnorColey_ochem_predict_nn_2023.utils.descriptors import edits_to_vectors, oneHotVector # for testing
 from ConnorColey_ochem_predict_nn_2023.main.score_candidates_from_edits_compact import build
